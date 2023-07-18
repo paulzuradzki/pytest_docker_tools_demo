@@ -1,5 +1,9 @@
 """test_db.py
 This is a demonstration of the pytest_docker_tools package to create a local Postgres database for testing with Docker.
+
+* We create container running a postgres DB on our local machine that is seeded with a table from `postgres-init.sql`
+* We test a database insert operation and assert that the inserted values match the defined test cases
+
 """
 
 import os
