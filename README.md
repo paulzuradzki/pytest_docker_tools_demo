@@ -4,6 +4,20 @@ This is a demonstration of the `pytest_docker_tools` package to create a local P
 * Several Python packages exist that provide convenient functions for controlling Docker containers within the scope of pytest tests.
 * This is useful for when you do not have (or do not want) access to the production database in unit tests.
 
+### Repo contents
+
+```
+.
+├── README.md
+├── requirements.txt
+├── src
+└── tests
+    ├── postgres-init.sql
+    └── test_db.py
+
+2 directories, 4 files
+```
+
 ### Database initialization script
 * Create a SQL DB table initializer script (`postgres-init.sql`), which runs automatically when the container starts.
 * Alternatively, you run the CREATE TABLE statements directly in your tests.
