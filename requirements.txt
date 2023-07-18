@@ -1,0 +1,3 @@
+pytest-docker-tools
+psycopg2
+pytest
