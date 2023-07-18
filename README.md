@@ -22,14 +22,9 @@ Advantages
 2 directories, 4 files
 ```
 
-### Database initialization script
-* Create a SQL DB table initializer script (`postgres-init.sql`), which runs automatically when the container starts.
+### Database initialization script - `tests/postgres-init.sql`
+* Create a SQL DB table initializer script (`postgres-init.sql`), which runs automatically when the container starts. This can contain initial setup like table creation.
 * Alternatively, you run the CREATE TABLE statements directly in your tests.
-
-```sql
-/* ./tests/postgres-init.sql */
-CREATE TABLE IF NOT EXISTS test (id serial PRIMARY KEY, num integer, data varchar);
-```
 
 ### Test code - `tests/test_db.py`
 * The code is designed to test database operations in isolation by running each test with a clean, temporary PostgreSQL database in a Docker container.
@@ -39,7 +34,7 @@ CREATE TABLE IF NOT EXISTS test (id serial PRIMARY KEY, num integer, data varcha
 `python -m pytest`
 
 ### VS Code `.vscode/launch.json` config for IDE debugger
-To run the pytest suite in debug mode we have need a little IDE configuration.
+To run the pytest suite in VS Code's debug mode, we need a little configuration.
 * In VS Code, open the command palette with CMD+Shift+P.
 * Search `Debug: Add Configuration`.
 * Edit the `launch.json` file with the following.
