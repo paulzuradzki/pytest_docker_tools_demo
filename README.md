@@ -6,7 +6,7 @@ This is a demonstration of the `pytest_docker_tools` package to create a local P
 
 Advantages
 * More realistic tests - you want to test actual DB method calls (e.g., `cursor.execute()`) instead of mocking them
-* Development - you can use the test DB to run small snippets and debug in your IDE instead of testing against a live system
+* Development - you can use the test DB to run small snippets and debug interactively in your IDE instead of testing against a live system
 
 ### Repo contents
 
